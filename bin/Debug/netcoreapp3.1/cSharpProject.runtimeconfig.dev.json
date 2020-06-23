@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\reeva\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\reeva\\.nuget\\packages"
+    ]
+  }
+}

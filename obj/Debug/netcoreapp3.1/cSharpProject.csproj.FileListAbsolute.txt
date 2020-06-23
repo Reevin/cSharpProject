@@ -1,0 +1,13 @@
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.csprojAssemblyReference.cache
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.AssemblyInfoInputs.cache
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.AssemblyInfo.cs
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.csproj.CoreCompileInputs.cache
+C:\Users\reeva\Documents\code\github\cSharpProject\bin\Debug\netcoreapp3.1\cSharpProject.exe
+C:\Users\reeva\Documents\code\github\cSharpProject\bin\Debug\netcoreapp3.1\cSharpProject.deps.json
+C:\Users\reeva\Documents\code\github\cSharpProject\bin\Debug\netcoreapp3.1\cSharpProject.runtimeconfig.json
+C:\Users\reeva\Documents\code\github\cSharpProject\bin\Debug\netcoreapp3.1\cSharpProject.runtimeconfig.dev.json
+C:\Users\reeva\Documents\code\github\cSharpProject\bin\Debug\netcoreapp3.1\cSharpProject.dll
+C:\Users\reeva\Documents\code\github\cSharpProject\bin\Debug\netcoreapp3.1\cSharpProject.pdb
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.dll
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.pdb
+C:\Users\reeva\Documents\code\github\cSharpProject\obj\Debug\netcoreapp3.1\cSharpProject.genruntimeconfig.cache
