@@ -7,7 +7,7 @@ namespace cSharpProject
         static void Main(string[] args)
         {
             Story first = new Story();
-            Menu menu = new Menu(30);
+            Menu menu = new Menu();
             first.Sentence = "If you had made a story it would appear here.";
 
             while(true)

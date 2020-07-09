@@ -7,11 +7,11 @@ namespace cSharpProject
     {
         private string _menuTitle = "TANDEM STORY";
         private List<string> _menuItems = new List<string> { "Begin", "Continue", "Print", "Quit" };
-        private int _menuWidth;
+        private int _menuWidth = 30;
 
-        public Menu(int width)
+        public Menu()
         {
-            _menuWidth = width;
+            
         }
         public void ShowMenu()
         {
