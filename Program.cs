@@ -7,6 +7,7 @@ namespace cSharpProject
         static void Main(string[] args)
         {
             Story first = new Story();
+            Menu menu = new Menu(30);
             first.Sentence = "If you had made a story it would appear here.";
 
             while(true)
@@ -30,13 +31,15 @@ namespace cSharpProject
                         // Leave story building
                         if(input.ToLower().Equals("stop")) { break; }
 
-                        first.Add(input);
+                        first.AddSentence(input);
                     }
                 }
 
-                
+                if(input.ToLower().Equals("print"))
                 {
                     Console.WriteLine(first.Sentence);
+                    System.Console.WriteLine();
+                    menu.ShowMenu();
                 }
             }
         }

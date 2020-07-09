@@ -4,7 +4,7 @@ namespace cSharpProject
     {
         public string Sentence { get; set; } = "";
 
-        public void Add(string input)
+        public void AddSentence(string input)
         {
             Sentence += ' ' + input;
         }
