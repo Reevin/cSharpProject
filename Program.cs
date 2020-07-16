@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace cSharpProject
 {
@@ -7,18 +8,29 @@ namespace cSharpProject
         static void Main(string[] args)
         {
             Story first = new Story();
-            Menu menu = new Menu();
+
+            char barCharacter = '=';
+            int menuWidth = 30;
+            string menuTitle = "TANDEM STORY";
+            List<string> menuSelections = new List<string> { "Begin", "Continue", "Print", "Quit" };
+
+            Menu mainMenu = new Menu(barCharacter, menuWidth, menuTitle, menuSelections);
+
             first.Sentence = "If you had made a story it would appear here.";
 
             while(true)
             {
-                Console.Write("Tandem Story: ( 'quit' to exit. 'begin' to start a new story. 'print' to show story. ) ");
-                string input = Console.ReadLine();
+                mainMenu.ShowMenu();
+                string input = mainMenu.GetMenuOption();
                 
                 // Exit
-                if(input.ToLower().Equals("quit")) { break; }
+                if(input.Equals("Quit"))
+                {
+                    Console.WriteLine("Goodbye!");
+                    break;
+                }
 
-                if(input.ToLower().Equals("begin"))
+                if(input.Equals("Begin"))
                 {
                     Console.Write("Type a sentence to add to the story. ('stop' to complete.) ");
                     first.Sentence = Console.ReadLine();
@@ -35,11 +47,17 @@ namespace cSharpProject
                     }
                 }
 
-                if(input.ToLower().Equals("print"))
+                if(input.Equals("Continue"))
+                {
+                    System.Console.WriteLine("Not implemented...");
+                    Console.ReadLine();
+                }
+
+                if(input.Equals("Print"))
                 {
                     Console.WriteLine(first.Sentence);
-                    System.Console.WriteLine();
-                    menu.ShowMenu();
+                    System.Console.Write("-- Press enter to return to menu. --");
+                    Console.ReadLine();
                 }
             }
         }

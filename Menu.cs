@@ -5,13 +5,18 @@ namespace cSharpProject
 {
     class Menu
     {
-        private string _menuTitle = "TANDEM STORY";
-        private List<string> _menuItems = new List<string> { "Begin", "Continue", "Print", "Quit" };
-        private int _menuWidth = 30;
+        private char _barCharacter;
+        private int _menuWidth;
+        private string _menuTitle;
+        private List<string> _menuSelections;
+        
 
-        public Menu()
+        public Menu(char barCharacter, int menuWidth, string menuTitle, List<string> menuSelections)
         {
-            
+            _barCharacter = barCharacter;
+            _menuWidth = menuWidth;
+            _menuTitle = menuTitle;
+            _menuSelections = menuSelections;
         }
         public void ShowMenu()
         {
@@ -21,19 +26,47 @@ namespace cSharpProject
             Console.WriteLine( new String(' ', ( _menuWidth / 2 ) - ( _menuTitle.Length / 2 ) ) + _menuTitle);
 
             int number = 1;
-            foreach( var item in _menuItems )
+            foreach( var item in _menuSelections )
             {
                 Console.WriteLine( number + ". " + item);
                 number++;
             }
             PrintBlankMenuLine();
             Console.WriteLine();
-            Console.Write( "Option: ");
+            //Console.Write( "Option: ");
         }
 
-        private string PrintMenuLine(string item)
+        public string GetMenuOption()
         {
-            string output = "";
+            string wrongInput = "Please enter a valid menu number";
+            string output;
+            int selection = 0;
+            
+            while(true)
+            {
+                Console.Write("Selection: ");
+                string input = Console.ReadLine();
+
+                try
+                {
+                    selection = Int16.Parse(input);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine(wrongInput);
+                    continue;
+                }
+
+                if( selection > 0 && selection <= _menuSelections.Count )
+                {
+                    output = _menuSelections[selection - 1];
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(wrongInput);
+                }
+            }
 
             return output;
         }
