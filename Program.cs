@@ -12,7 +12,7 @@ namespace cSharpProject
             char barCharacter = '=';
             int menuWidth = 30;
             string menuTitle = "TANDEM STORY";
-            List<string> menuSelections = new List<string> { "Begin", "Continue", "Print", "Quit" };
+            List<string> menuSelections = new List<string> { "Begin", "Continue", "Print", "Quit", "Test" };
 
             Menu mainMenu = new Menu(barCharacter, menuWidth, menuTitle, menuSelections);
 
@@ -58,6 +58,35 @@ namespace cSharpProject
                     Console.WriteLine(first.Sentence);
                     System.Console.Write("-- Press enter to return to menu. --");
                     Console.ReadLine();
+                }
+
+                if(input.Equals("Test"))
+                {
+                    string text = System.IO.File.ReadAllText(@".\Stories\test.txt");
+
+                    Console.WriteLine("Contents of test.txt = {0}", text);
+
+                    string sourcePath = @".\Stories";
+                    string[] files = System.IO.Directory.GetFiles(sourcePath);
+
+                    foreach (string s in files)
+                    {
+                        Console.WriteLine(System.IO.Path.GetFileName(s));
+                    }
+                    Console.WriteLine();
+
+                    string[] lines = { "This is the third test file.", "And the third test sentence.", "Third redundant line." };
+                    // WriteAllLines creates a file, writes a collection of strings to the file,
+                    // and then closes the file.  You do NOT need to call Flush() or Close().
+                    System.IO.File.WriteAllLines(@".\Stories\test3.txt", lines);
+
+                    files = System.IO.Directory.GetFiles(sourcePath);
+
+                    foreach (string s in files)
+                    {
+                        Console.WriteLine(System.IO.Path.GetFileName(s));
+                    }
+                    Console.WriteLine();
                 }
             }
         }
