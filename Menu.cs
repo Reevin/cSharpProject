@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace cSharpProject
 {
@@ -8,10 +7,10 @@ namespace cSharpProject
         private char _barCharacter;
         private int _menuWidth;
         private string _menuTitle;
-        private List<string> _menuSelections;
+        private string[] _menuSelections;
         
 
-        public Menu(char barCharacter, int menuWidth, string menuTitle, List<string> menuSelections)
+        public Menu(char barCharacter, int menuWidth, string menuTitle, string[] menuSelections)
         {
             _barCharacter = barCharacter;
             _menuWidth = menuWidth;
@@ -57,7 +56,7 @@ namespace cSharpProject
                     continue;
                 }
 
-                if( selection > 0 && selection <= _menuSelections.Count )
+                if( selection > 0 && selection <= _menuSelections.Length )
                 {
                     output = _menuSelections[selection - 1];
                     break;
@@ -75,7 +74,7 @@ namespace cSharpProject
         {
             for(var num = 0; num < _menuWidth; num++)
             {
-                Console.Write("=");
+                Console.Write(_barCharacter);
             }
             Console.WriteLine();
         }

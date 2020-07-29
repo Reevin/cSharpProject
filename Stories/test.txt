@@ -1,1 +1,5 @@
-This is just a test. This is a second test line. This is a third text line.
+This is just a test story file.
+This is the second line of the test story file. 
+And the third line.
+And a fourth.
+Finally this is the last test text line.
